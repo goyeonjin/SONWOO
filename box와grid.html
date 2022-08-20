@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>배우 손우현</title>
+    <style>
+
+      h1{
+        text-align: center;
+        border-bottom:1px solid gray;
+        margin:0px;
+        padding:30px;
+          }
+
+      ol{
+        border-right: 1px solid gray;
+        width:100px;
+        margin:0px;
+        padding:20px;
+         }
+
+      body{
+           margin:0px;
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1><a href="index.html">배우 손우현</a></h1>
+      <div id="grid">
+        <ol>
+            <li><a href="개요.html">개요</a></li>
+            <li><a href="작품활동.html">작품활동</a></li>
+            <li><a href="작사작곡.html">작사작곡</a></li>
+            <li><a href="box와grid.html">box와 grid</a></li>
+        </ol>
+
+          <div>
+            <h2> box모델 이용한 홈페이지 꾸미기</h2>
+            <h3>contents - padding - border - margin</h3>
+            <p>태그들은 각자의 부피를 가지고 있음<br>
+              전체를 쓰는 태그를 block level element , 자신의 콘텐츠 크기만큼 쓰는 태그를 inline level element<br>
+              <strong>태그마다 전체를 쓰는 것과 부분을 쓰는 태그가 있는데 이건 얼마든지 바꿀 수 있음</strong><br>
+              부피감을 바꾸기 위해서 <strong style="color:red;">display 속성</strong>을 사용</p>
+              <p>display: inline;  <br>
+                diaplay:block; <br>
+                display:none;</p>
+                <p>화면 전체를 쓰고 있는 태그에서 display:brock; 가 생략 되어 있으면 width: 숫자px 를 사용할 수 있음</p>
+                <br>
+
+
+                <h2>grid를 이용한 홈페이지 꾸미기</h2>
+                <p><img src="grid코딩이미지.png" alt="grid코딩"></p>
+
+                내가 하고 싶은건 옆에 목록과 본문을 나란하게 배치<br>
+                본문은 h1태그와 p태그로 구성되어 있는데 이를 하나의 태그로 묶어줘야 덩어리 두개(목록과 본문)로 나눌 수 있지<br>
+                이때 사용할 수 있는 아무런 영향도 미치지 않는 무색 무취의 태그가 필요<br>
+                <strong style="color:red">&lt;div&gt; 와 &lt;span&gt;</strong>
+                <p>&lt;div&gt; : division의 약자로 block level element<br>
+                  &lt;span&gt; : inline element</p>
+
+                  <p>지금 있는 건 <strong style="color:blue">h1태그와 p태그를 묶은 &lt;div&gt;</strong>와 <strong>&lt;ol&gt;</strong><br><br>
+
+                    이 <strong>두 개를 하나의 그룹으로 묶어 그리드에 포함되는 하나의 요소를 사용하기 위해서</strong>는 두 개를 감싸는 <strong style="color:green">공통의 부모 태그가 필요</strong><br>
+                    이번에도 <strong style="color: green">&lt;div&gt;</strong>를 사용해보자<br>
+                  </p>
+
+                  <p> <img src="grid코딩이미지2.png" alt="grid코딩2"></p>
+                  <p>부모 태그의 id값을 'grid'로 지정<br>
+                    <strong style="color: green">디자인 목적만으로 &lt;div id="grid"&gt;</strong>가 필요<br>
+                  </p>
+                  <p>앞서 부피감을 바꾸기 위한 display 속성 block,inline,none을 언급했었음<br>
+                    그러나 grid에서는 display 안먹힘<br><br>
+
+                    이때 <strong style="color: mediumpurple">grid-template-columns 속성을 추가</strong><br>
+
+                    150px은 첫 번째 칼럼의 부피로 고정된 값이고 1fr은 화면 크기에 따라 달라짐<br><br>
+
+
+                    <strong>grid-template-columns: 2fr 1fr;</strong><br>
+                    화면 전체를 3fr로 했을 때 왼쪽을 2, 오른쪽을 1로 나눠쓰겠단 소리</p>
+
+                  </div>
+                </div>
+</html>
